@@ -1,10 +1,10 @@
-package org.software;
+package org.booknest;
 
-import org.software.Controller.LibrarianController;
-import org.software.Controller.UserController;
-import org.software.Model.UserInfo;
-import org.software.Services.UserServicing;
-import org.software.Services.LibrarianServicing;
+import org.booknest.Controller.LibrarianController;
+import org.booknest.Controller.UserController;
+import org.booknest.Model.UserInfo;
+import org.booknest.Services.UserServicing;
+import org.booknest.Services.LibrarianServicing;
 
 import java.util.Scanner;
 

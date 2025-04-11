@@ -1,8 +1,7 @@
-package org.software.Services;
+package org.booknest.Services;
 
-import org.software.Model.Books;
-import org.software.Model.UserInfo;
-import org.software.Services.UserServicing;
+import org.booknest.Model.Books;
+import org.booknest.Model.UserInfo;
 
 import java.util.*;
 

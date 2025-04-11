@@ -1,11 +1,10 @@
-package org.software.Services;
+package org.booknest.Services;
 
-import org.software.Model.Books;
-import org.software.Model.UserInfo;
+import org.booknest.Model.Books;
+import org.booknest.Model.UserInfo;
 
-import java.awt.print.Book;
 import java.util.*;
-import org.software.Model.UserInfo;
+
 public class UserServicing implements UserServices {
     public List<UserInfo>userInfoList;
     UserInfo ufo = new UserInfo();

@@ -1,6 +1,6 @@
-package org.software.Services;
+package org.booknest.Services;
 
-import org.software.Model.Books;
+import org.booknest.Model.Books;
 
 public interface LibrarianServices {
      void addNewBooks(Books bk);

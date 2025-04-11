@@ -1,9 +1,7 @@
-package org.software.Services;
+package org.booknest.Services;
 
-import org.software.Model.UserInfo;
-import org.software.Model.Books;
-
-import java.awt.print.Book;
+import org.booknest.Model.UserInfo;
+import org.booknest.Model.Books;
 
 public interface UserServices {
      void addUser(UserInfo ui);

@@ -1,4 +1,4 @@
-package org.software.Model;
+package org.booknest.Model;
 
 public class LibrarianInfo {
     private String libName;
