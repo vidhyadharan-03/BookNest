@@ -9,6 +9,9 @@ public class LibrarianServicing implements LibrarianServices{
     public HashMap<Books,String>booksList;
     public HashMap<Books,UserInfo>borrowingDetails;
 
+
+    UserServicing us = new UserServicing();
+
     public LibrarianServicing()
     {
         this.booksList=new HashMap<>();
@@ -64,22 +67,25 @@ public class LibrarianServicing implements LibrarianServices{
 
     public void lendBook(int choice,String booktitle,UserInfo ufo)
     {
-        UserServicing us = new UserServicing();
+
         int flag=0;
         for(Map.Entry<Books,String>bk:booksList.entrySet())
         {
-            if(bk.getKey().getName().equalsIgnoreCase(booktitle)&&(bk.getValue().equalsIgnoreCase("Available")))
+            if(bk.getKey().getName().equalsIgnoreCase(booktitle)&&(bk.getValue().equalsIgnoreCase("Available")) && choice==1)
             {
                 String notAvail ="Not Available";
-                us.addBooktoBorrowedList(bk.getKey());
+                us.addBooktoBorrowedList(bk.getKey(),ufo);
                 borrowingDetails.put(bk.getKey(),ufo);
                 booksList.put(bk.getKey(),notAvail);
                 flag=1;
             }
         }
-        if(flag==0)
+        if(flag==1)
         {
-            System.out.println("Book not Found!!");
+            System.out.println("Sucessfully added");
+        }
+        else {
+            System.out.println("Not found !!");
         }
     }
 

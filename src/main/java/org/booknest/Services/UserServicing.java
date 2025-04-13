@@ -7,7 +7,7 @@ import java.util.*;
 
 public class UserServicing implements UserServices {
     public List<UserInfo>userInfoList;
-    UserInfo ufo = new UserInfo();
+    //UserInfo ufo = new UserInfo();
     public UserServicing()
     {
         this.userInfoList=new ArrayList<>();
@@ -27,8 +27,22 @@ public class UserServicing implements UserServices {
     }
 
     @Override
-    public void addBooktoBorrowedList(Books bk) {
+    public void addBooktoBorrowedList(Books bk,UserInfo ufo) {
         ufo.setBorrowedBooks(bk);
-        System.out.println("You borrowed the book successfully!!!");
+        //System.out.println("You borrowed the book successfully!!!");
+    }
+
+    @Override
+    public void viewBorrowedBook(UserInfo ufs) {
+        List<Books>temporyBorrowList=ufs.getUserborrowList();
+        for(Books bk : temporyBorrowList)
+        {
+            System.out.println("Book Name : "+bk.getName());
+            System.out.println("Book ID : "+bk.getId());
+            System.out.println("Author Name : "+bk.getAuthor());
+            System.out.println("Published Year : "+bk.getPublishedYear());
+            System.out.println("--------------------------------------------------");
+        }
+
     }
 }

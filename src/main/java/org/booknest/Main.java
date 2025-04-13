@@ -46,11 +46,30 @@ public class Main {
                     usa.addUser(person);
                     lbs.showBook();
                     System.out.println("--------------------------------------------");
-                    String searchedBook = controller.bookSearchInput();
-                   lbs.searchbookbyName(searchedBook);
+                    char userOptionInputRepeator ='a';
+                    do{
 
-                   lbs.lendBook(controller.borrowBook(),searchedBook,person);
-                    break;
+                    System.out.println("1.SearchBook");
+                    System.out.println("2.View book borrowed");
+                    int userSelector = scan.nextInt();
+                    switch(userSelector) {
+                        case 1:
+                            String searchedBook = controller.bookSearchInput();
+                            lbs.searchbookbyName(searchedBook);
+                            lbs.lendBook(controller.borrowBook(), searchedBook, person);
+                            System.out.print("Do you want to Continue.. press(y/n) : ");
+                            userOptionInputRepeator = scan.next().charAt(0);
+                            System.out.println();
+                            break;
+                        case 2:
+                            usa.viewBorrowedBook(person);
+                            System.out.print("Do you want to Continue.. press(y/n) : ");
+                            userOptionInputRepeator = scan.next().charAt(0);
+
+                            System.out.println();
+                            break;
+                    }
+                    }while(userOptionInputRepeator=='y');
 
                 // case 2 depicts the librarian and its functionality.
                 case 2:

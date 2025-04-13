@@ -36,7 +36,7 @@ public class UserController {
     public int borrowBook()
     {
         System.out.println("-----------------------------------------");
-        System.out.println("Do You wanna Borrow this book ? ");
+        System.out.println("Do You wanna Borrow this book ? type(yes/no)");
         String borrowInput = scan.next();
         if(borrowInput.equalsIgnoreCase("yes"))
         {
