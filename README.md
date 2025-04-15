@@ -64,7 +64,9 @@ This project simulates a real-world library environment, allowing interactions b
 - Layered separation of concerns (Model, Service, Controller)
 - Decoupled flow and role-based abstraction
 - Domain-driven method naming and responsibility split
-
+  
+###⭐️ If you liked this project...
+Give it a ⭐️ on GitHub and share your thoughts on LinkedIn www.linkedin.com/in/vidhyadharan-r
 ---
 
 ## 📊 Data Structures Used
@@ -88,4 +90,11 @@ This project simulates a real-world library environment, allowing interactions b
 git clone https://github.com/vidhyadharan-03/BookNest.git
 cd BookNest
 Run Main.java
+```
+
+⭐️ If you liked this project...
+Give it a ⭐️ on GitHub and share your thoughts on LinkedIn www.linkedin.com/in/vidhyadharan-r
+
+
+
 
