@@ -106,4 +106,20 @@ public class LibrarianServicing implements LibrarianServices{
 
 
     }
+
+    @Override
+    public void removeFromLibBorrow(int yes,UserInfo person,String bkName, int bkId) {
+        if(yes==1)
+        {
+            for(Map.Entry<Books,UserInfo>entry : borrowingDetails.entrySet())
+            {
+                if(entry.getKey().getName().equalsIgnoreCase(bkName) && entry.getKey().getId()==bkId && entry.getValue().getUserName().equalsIgnoreCase(person.getUserName()) ){
+                    borrowingDetails.remove(entry.getKey(),entry.getValue());
+                    booksList.put(entry.getKey(),"Available");
+
+                }
+            }
+        }
+        return;
+    }
 }

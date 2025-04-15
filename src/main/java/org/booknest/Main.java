@@ -51,6 +51,7 @@ public class Main {
 
                     System.out.println("1.SearchBook");
                     System.out.println("2.View book borrowed");
+                    System.out.println("3.Return book");
                     int userSelector = scan.nextInt();
                     switch(userSelector) {
                         case 1:
@@ -68,6 +69,17 @@ public class Main {
 
                             System.out.println();
                             break;
+                        case 3:
+                            System.out.print("Enter Book Name : ");
+                            String bkName = scan.next();
+                            System.out.println();
+                            System.out.print("Book Id : ");
+                            int bkId = scan.nextInt();
+                            System.out.println();
+                            int removedFromUserList = usa.removeFromBorrowList(person,bkName,bkId);
+                            lbs.removeFromLibBorrow(removedFromUserList,person,bkName,bkId);
+                            usa.viewBorrowedBook(person);
+
                     }
                     }while(userOptionInputRepeator=='y');
 

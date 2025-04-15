@@ -7,7 +7,7 @@ public class UserInfo {
     private int userId;
     private String userMobileNo;
     private String userLocation;
-    private List<Books>borrowedBooks;
+    public List<Books>borrowedBooks;
 
     public UserInfo()
     {
@@ -48,6 +48,10 @@ public class UserInfo {
     {
         this.borrowedBooks.add(bk);
     }
+    public void removeBorrowedBooks(Books bk)
+    {
+        this.borrowedBooks.remove(bk);
+    }
 
 
     //Getter starting....
@@ -68,7 +72,7 @@ public class UserInfo {
     public String getUserLocation() {
         return userLocation;
     }
-    public List getUserborrowList()
+    public List<Books> getUserborrowList()
     {
         return borrowedBooks;
     }

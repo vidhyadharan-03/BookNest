@@ -44,5 +44,22 @@ public class UserServicing implements UserServices {
             System.out.println("--------------------------------------------------");
         }
 
+
+    }
+
+    @Override
+    public int removeFromBorrowList(UserInfo ufo, String bkName, int bkId) {
+
+        List<Books>temp = ufo.getUserborrowList();
+
+        for(Books borrowed : temp)
+        {
+            if(borrowed.getName().equalsIgnoreCase(bkName) && borrowed.getId()==bkId)
+            {
+                ufo.removeBorrowedBooks(borrowed);
+                return 1;
+            }
+        }
+       return 0;
     }
 }

@@ -9,4 +9,5 @@ public interface UserServices {
      void addBooktoBorrowedList(Books bk,UserInfo person);
      void viewBorrowedBook(UserInfo ufo);
     //public abstract void()
+     int removeFromBorrowList(UserInfo ufo,String bkName,int bkId);
 }
